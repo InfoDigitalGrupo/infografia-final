@@ -40,6 +40,8 @@ El Gobierno aceptó la donación del avión Supertanker hecha por la Fundación 
 
 Se movilizaron un total de 1.575 brigadistas de CONAF 1.083 combatientes de BRIFE y BRIFAR y 631 combatientes de la cooperación internacional, que en total suman 3.294 combatientes en la línea de fuego. Junto con ello se entregaron elementos de emergencia para personas afectadas o damnificadas.
 
+# PARA CONSIDERAR A FUTURO
+
 La combinación de condiciones meteorológicas adversas, configuró el factor “30-30-30 “que es una situación que los organismos que combaten incendios forestales consideran como "extrema". Son tres condiciones climáticas que, juntas, activan una propagación rápida del fuego: 30 o más grados Centígrados de temperatura, menos de un 30% de humedad del ambiente y más de 30 nudos de velocidad del viento. 
 
 En ecosistemas boscosos, los incendios forestales conforman un proceso vital y esencial para los procesos de sucesión ecológica y mantenimiento de la estabilidad al interior de los ecosistemas. Sin embargo, esta estabilidad ha sido crecientemente modificada por la acción humana, a través de la intervención cada vez más agresiva sobre los recursos naturales renovables.  
