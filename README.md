@@ -6,7 +6,7 @@ Chile es uno de los países más vulnerables del mundo a los efectos del cambio 
 
 La “Tormenta de Fuego” ocurrida fue catalogada de sexta generación por Marc Castellnou, especialista de la Unión Europea, al sumar a las características de un evento de quinta generación (como son la continuidad de combustible, una rapidez de propagación, una alta intensidad energética, el daño a zonas urbanas y la simultaneidad de ocurrencia por efecto de cambio climático), ya que es capaz de modificar la meteorología de su alrededor, es decir, la virulencia del fuego crea potentes columnas de aire caliente que desprenden tanta energía que son capaces de producir sus propias nubes o tormentas (pirocúmulos).
 
-## IMPACTO EN EL SECTOR
+# IMPACTO EN EL SECTOR
 
 El detalle por región y categoría de uso de suelo se puede apreciar en la tabla n°1. La mayor proporción de daño corresponde a plantaciones forestales (siendo un 80% pino radiata); bosques nativos en su mayoría del tipo esclerófilo, praderas y matorrales.
 					
@@ -18,7 +18,7 @@ El efecto asociado al sector pecuario afectó a 4.696 agricultores, quienes tuvi
  En términos concretos, junto con la pérdida de cultivos y plantaciones, pequeños productores agrícolas fueron además afectados con la pérdida de sus ganados y colmenas, que constituían parte importante de su capital de trabajo. 
 Esta emergencia involucró a casi 45 mil cabezas de ganado ovino y caprino, 46 mil colmenas de abejas, ocho mil 500 cabezas bovinas y cinco mil 600 equinos.
 
-### MAPA DE LAS ZONAS AFECTADAS
+# MAPA DE LAS ZONAS AFECTADAS
 
 Lo que se distribuye en MM USD 110.7 millones de bosque nativo, MM USD 25 millones de infraestructura, y Agricultura: MM USD 36, aproximadamente, entre frutales, praderas, cultivos anuales y forrajeras quemadas. El 80% corresponde a praderas y frutales, en proporciones similares (Fuente OSEPA). Foresto- industria: MM USD 497 (Fuente ODEPA).
 
@@ -29,7 +29,7 @@ Según Castellnou, en sus primeras 14 horas este siniestro quemó 115 mil hectá
 al avanzar a una velocidad de 6 kilómetros por hora con una intensidad promedio de energía de 60 mil kilovatios/metro, lo cual superó en diez veces la capacidad máxima de referencia de extinción de fuego a nivel mundial (6 mil kilovatios/metro).
 Fue tal su magnitud que calcinó el pueblo de Santa Olga (mil viviendas) y tuvo la capacidad de alterar los comportamientos de patrones sinópticos de temperatura y humedad en todo Chile Central, llegando su influencia incluso hasta la Isla Robinson Crusoe.
 
-#### AERONAVES AL RESCATE Y RECURSOS HUMANOS DISPONIBLES
+# AERONAVES AL RESCATE Y RECURSOS HUMANOS DISPONIBLES
 
 
 Se trasladaron desde otras regiones y en un mínimo de tiempo, Brigadas de CONAF, Unidades de Bomberos y BRIFES de las FF.AA. Se mantuvo un sostenimiento logístico para labores de soporte, apoyo, combate y control de incendios, como también a las solicitudes levantadas por las comunas. Se distribuyeron miles de litros de combustible, agua, raciones de alimento, sumando a ello miles de herramientas, kits de aseo y material de alojamiento.  
