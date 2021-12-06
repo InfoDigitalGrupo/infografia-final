@@ -49,3 +49,8 @@ En ecosistemas boscosos, los incendios forestales conforman un proceso vital y e
 Durante la quema de un bosque, el dióxido de carbono almacenado por los árboles durante décadas, es liberado a la atmósfera en cuestión de horas. En consecuencia, si la vegetación quemada no se regenera, el dióxido de carbono liberado permanece en la atmósfera. Estos gases liberados contribuyen al calentamiento global, desencadenando en forma gradual un cambio climático a nivel planetario. 
 
 Los incendios de 2017 arrojaron alrededor de 100 millones de toneladas de dióxido de carbono equivalente a la atmósfera, cercano a los 111,6 millones de toneladas que se emitieron en todo Chile el año 2016.  
+
+
+## INFOGRAFÍA UC 
+
+Equipo de trabajo: José Carter, Verónica Gatica, Francisca Patricia, Constanza Valdovinos, Benjamín Vicente. 
