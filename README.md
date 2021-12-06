@@ -51,6 +51,6 @@ Durante la quema de un bosque, el dióxido de carbono almacenado por los árbole
 Los incendios de 2017 arrojaron alrededor de 100 millones de toneladas de dióxido de carbono equivalente a la atmósfera, cercano a los 111,6 millones de toneladas que se emitieron en todo Chile el año 2016.  
 
 
-## INFOGRAFÍA UC 
+## INFOGRAFÍA UC // DICIEMBRE 2021
 
 Equipo de trabajo: José Carter, Verónica Gatica, Francisca Patricia, Constanza Valdovinos, Benjamín Vicente. 
