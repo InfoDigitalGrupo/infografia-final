@@ -71,6 +71,26 @@
       .impacto-forestal > img:not(:first-child) {
         margin-left: calc(-1 * var(--size));
       }
+
+      /* animación de los circulos */
+      svg .circle-animation > g {
+        transition: 0.6s ease-in-out;
+      }
+
+      svg:not(:active, :hover) .circle-animation > g {
+        transform: translateY(-90%);
+        transition-delay: 1.5s;
+        opacity: 0;
+      }
+
+      .circle-animation circle {
+        fill: #a6211c;
+      }
+
+      .circle-animation text {
+        font-size: 0.3em;
+        fill: #e2e2e2;
+      }
     </style>
     <meta property="og:title" content="La Tormenta Ignea del 2017" />
     <meta
@@ -107,12 +127,14 @@
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
             <h3 class="text-center">El Impacto Silvoagropecuario</h3>
             <p>
-              La superficie más afectada corresponde a plantaciones forestales (propiedad de grandes empresas), zonas con especies introducidas como el pino radiata o eucaliptus acumulan altas cargas de combustible, esto genera una “receta para el desastre” lo que facilita la propagación del incendio. Esto tiene un gran impacto en la región ya que se expande y pone en riesgos especies nativas en categoría de conservación. 
-
+              La superficie más afectada corresponde a plantaciones forestales (propiedad de grandes empresas), zonas
+              con especies introducidas como el pino radiata o eucaliptus acumulan altas cargas de combustible, esto
+              genera una “receta para el desastre” lo que facilita la propagación del incendio. Esto tiene un gran
+              impacto en la región ya que se expande y pone en riesgos especies nativas en categoría de conservación.
             </p>
           </div>
 
-          <div class="impacto-forestal" style="display:none">
+          <div class="impacto-forestal" style="display: none;">
             <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
             <img src="grafica/impacto-forestal/4.svg" />
             <img src="grafica/impacto-forestal/3.svg" />
@@ -122,7 +144,11 @@
 
           <div class="col-lg-11 col-xl-10 col-xxl-9 mx-auto pt-3 pb-4">
             <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
-            <object type="image/svg+xml" data="grafica/tipos-suelo/full-con-etiqueta.svg" class="d-none d-md-block w-100"></object>
+            <object
+              type="image/svg+xml"
+              data="grafica/tipos-suelo/full-con-etiqueta.svg"
+              class="d-none d-md-block w-100"
+            ></object>
             <object type="image/svg+xml" data="grafica/tipos-suelo/1-con-etiqueta.svg" class="d-md-none w-100"></object>
             <object type="image/svg+xml" data="grafica/tipos-suelo/2-con-etiqueta.svg" class="d-md-none w-100"></object>
             <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
@@ -139,6 +165,11 @@
               <!--primer gráfico de pérdidas: vaca-->
               <article class="col-6 col-xl-3">
                 <svg width="100%" height="100%" viewBox="0 0 42 42">
+                  <defs>
+                    <clipPath id="animation-cut">
+                      <circle cx="21" cy="21" r="15"></circle>
+                    </clipPath>
+                  </defs>
                   <circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
                   <circle
                     cx="21"
@@ -163,12 +194,25 @@
                   <!--en el texto corresponde poner el porcentaje-->
                   <text x="50%" y="29" dominant-baseline="middle" text-anchor="middle" font-size="7">8.1%</text>
                   <!--y vayan a buscar a lo que corresponda al centro-->
-                  <image  x="12" y="8" width="18" height="18" href="grafica/animales/vaca.png" />
+                  <image x="12" y="8" width="18" height="18" href="grafica/animales/vaca.png" />
+                  <g clip-path="url(#animation-cut)" class="circle-animation">
+                    <g>
+                      <circle cx="21" cy="21" r="20" fill="#682B11"></circle>
+                      <text x="50%" y="21.5" dominant-baseline="middle" text-anchor="middle" font-size="7" fill="white">
+                        8.529
+                      </text>
+                    </g>
+                  </g>
                 </svg>
               </article>
               <!--segundo gráfico de pérdidas: abejas-->
               <article class="col-6 col-xl-3">
                 <svg width="100%" height="100%" viewBox="0 0 42 42">
+                  <defs>
+                    <clipPath id="animation-cut">
+                      <circle cx="21" cy="21" r="15"></circle>
+                    </clipPath>
+                  </defs>
                   <circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
                   <circle
                     cx="21"
@@ -194,12 +238,24 @@
                   <text x="50%" y="29" dominant-baseline="middle" text-anchor="middle" font-size="7">43.7%</text>
                   <!--y vayan a buscar a lo que corresponda al centro-->
                   <image x="12" y="8" width="18" height="18" href="grafica/animales/abeja.png" />
-         
+                  <g clip-path="url(#animation-cut)" class="circle-animation">
+                    <g>
+                      <circle cx="21" cy="21" r="20" fill="#682B11"></circle>
+                      <text x="50%" y="21.5" dominant-baseline="middle" text-anchor="middle" font-size="7" fill="white">
+                        45.817
+                      </text>
+                    </g>
+                  </g>
                 </svg>
               </article>
               <!--tercer gráfico de pérdidas: caprino-->
               <article class="col-6 col-xl-3">
                 <svg width="100%" height="100%" viewBox="0 0 42 42">
+                  <defs>
+                    <clipPath id="animation-cut">
+                      <circle cx="21" cy="21" r="15"></circle>
+                    </clipPath>
+                  </defs>
                   <circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
                   <circle
                     cx="21"
@@ -225,11 +281,24 @@
                   <text x="50%" y="29" dominant-baseline="middle" text-anchor="middle" font-size="7">42.8%</text>
                   <!--y vayan a buscar a lo que corresponda al centro-->
                   <image x="12" y="7" width="18" height="18" href="grafica/animales/caprinosyovinos.png" />
+                  <g clip-path="url(#animation-cut)" class="circle-animation">
+                    <g>
+                      <circle cx="21" cy="21" r="20" fill="#682B11"></circle>
+                      <text x="50%" y="21.5" dominant-baseline="middle" text-anchor="middle" font-size="7" fill="white">
+                        44.821
+                      </text>
+                    </g>
+                  </g>
                 </svg>
               </article>
               <!--cuarto gráfico de pérdidas: hipico-->
               <article class="col-6 col-xl-3">
                 <svg width="100%" height="100%" viewBox="0 0 42 42">
+                  <defs>
+                    <clipPath id="animation-cut">
+                      <circle cx="21" cy="21" r="15"></circle>
+                    </clipPath>
+                  </defs>
                   <circle cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
                   <circle
                     cx="21"
@@ -255,6 +324,14 @@
                   <text x="50%" y="29" dominant-baseline="middle" text-anchor="middle" font-size="7">5.3%</text>
                   <!--y vayan a buscar a lo que corresponda al centro-->
                   <image x="12" y="7" width="18" height="18" href="grafica/animales/caballo.png" />
+                  <g clip-path="url(#animation-cut)" class="circle-animation">
+                    <g>
+                      <circle cx="21" cy="21" r="20" fill="#682B11"></circle>
+                      <text x="50%" y="21.5" dominant-baseline="middle" text-anchor="middle" font-size="7" fill="white">
+                        5.642
+                      </text>
+                    </g>
+                  </g>
                 </svg>
               </article>
             </div>
@@ -284,71 +361,77 @@
 
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto mt-4">
             <p>
-              Dentro de los pueblos más afectados se encuentra Las Palmas, Santa Olga y Hualquí. Santa Olga 
-              fue totalmente arrasada por el fuego en pocas horas y constituyó el foco de la tragedia. Se destruyó
+              Dentro de los pueblos más afectados se encuentra Las Palmas, Santa Olga y Hualquí. Santa Olga fue
+              totalmente arrasada por el fuego en pocas horas y constituyó el foco de la tragedia. Se destruyó
               prácticamente en su totalidad, afectando a cientos de viviendas.
-
             </p>
           </div>
         </div>
       </section>
-      
-      <div class="container">
+      <section>
+        <div class="container">
           <div class="row">
             <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-
- <h3 class="text-center">Aeronaves al rescate</h3>
-             <p>
-                Se trasladaron desde otras regiones y en un mínimo de tiempo, Brigadas de CONAF, Unidades de Bomberos
-                y BRIFES de las FF.AA. Se mantuvo un sostenimiento logístico para labores de soporte, apoyo, combate 
-                y control de incendios, como también a las solicitudes levantadas por las comunas. Se distribuyeron miles
-                de litros de combustible, agua, raciones de alimento, sumando a ello miles de herramientas, kits de aseo 
-               y material de alojamiento.
+              <h3 class="text-center">Aeronaves al rescate</h3>
+              <p>
+                Se trasladaron desde otras regiones y en un mínimo de tiempo, Brigadas de CONAF, Unidades de Bomberos y
+                BRIFES de las FF.AA. Se mantuvo un sostenimiento logístico para labores de soporte, apoyo, combate y
+                control de incendios, como también a las solicitudes levantadas por las comunas. Se distribuyeron miles
+                de litros de combustible, agua, raciones de alimento, sumando a ello miles de herramientas, kits de aseo
+                y material de alojamiento.
               </p>
-              </div>
             </div>
           </div>
         </div>
         <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
-                <div class="row">
-    <div class="col-sm-6">
-            <span><img src="gif/Luchin.gif" alt="Luchin" width="100%" ></span>      
-    </div>
-    <div class="col-sm-6">      
-            <span><img src="gif/Supertanker.gif" alt="Luchin" width="100%"></span>     
-    </div>
-</div>
+        <div class="row">
+          <div class="col-sm-6">
+            <span><img src="gif/Luchin.gif" alt="Luchin" width="100%" /></span>
+          </div>
+          <div class="col-sm-6">
+            <span><img src="gif/Supertanker.gif" alt="Luchin" width="100%" /></span>
+          </div>
+        </div>
         <img src="grafica/Paisaje2tonos.png" class="d-md-none bg-light w-100" />
         <img src="grafica/Paisaje2tonos.png" class="d-none d-md-block w-100" />
         <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
-       <div class="container">
-            <div class="row">
-                <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto mt-4">
-                  
-                </div>
-            </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto mt-4"></div>
+          </div>
         </div>
-    </section>
-      
+      </section>
+
       <section class="container pt-4 pb-5">
-            <div class="row">
-                <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                    <h3 class="text-center">Para considerar en el futuro</h3>
-                    <p>La combinación de condiciones meteorológicas adversas, configuró el factor “30-30-30 “que es una situación que los organismos que combaten incendios forestales consideran como "extrema".</p>
-                </div>
+        <div class="row">
+          <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+            <h3 class="text-center">Para considerar en el futuro</h3>
+            <p>
+              La combinación de condiciones meteorológicas adversas, configuró el factor “30-30-30 “que es una situación
+              que los organismos que combaten incendios forestales consideran como "extrema".
+            </p>
+          </div>
 
-                <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto pt-3 pb-4">
-                    <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
-                    <img src="grafica/30-30-30.png" width="50%" class="d-md-none w-100 mx-auto">
-                    <img src="grafica/30-30-30.png" width="50%"class="d-none d-md-block w-50 mx-auto">
-                    <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
-                </div>
+          <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto pt-3 pb-4">
+            <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
+            <img src="grafica/30-30-30.png" width="50%" class="d-md-none w-100 mx-auto" />
+            <img src="grafica/30-30-30.png" width="50%" class="d-none d-md-block w-50 mx-auto" />
+            <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
+          </div>
 
-                <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                    <p>Durante la quema de un bosque, el dióxido de carbono almacenado por los árboles durante décadas, es liberado a la atmósfera en cuestión de horas. En consecuencia, si la vegetación quemada no se regenera, el dióxido de carbono liberado permanece en la atmósfera. Estos gases liberados contribuyen al calentamiento global, desencadenando en forma gradual un cambio climático a nivel planetario. Por lo que, la suma de incendios forestales acontecidos durante el 2017 establecen un desafío en la fiscalización de quemas en plantaciones forestales, como también el compromiso de regenerar los suelos degradados por la acción desenfrenada de utilizar los recursos naturales.</p>
-                </div>
-            </div>
-        </section>
+          <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+            <p>
+              Durante la quema de un bosque, el dióxido de carbono almacenado por los árboles durante décadas, es
+              liberado a la atmósfera en cuestión de horas. En consecuencia, si la vegetación quemada no se regenera, el
+              dióxido de carbono liberado permanece en la atmósfera. Estos gases liberados contribuyen al calentamiento
+              global, desencadenando en forma gradual un cambio climático a nivel planetario. Por lo que, la suma de
+              incendios forestales acontecidos durante el 2017 establecen un desafío en la fiscalización de quemas en
+              plantaciones forestales, como también el compromiso de regenerar los suelos degradados por la acción
+              desenfrenada de utilizar los recursos naturales.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- <img src="grafica/arboles-negros.svg" class="before-footer"> -->
@@ -357,23 +440,46 @@
         <div class="row py-5">
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto small">
             <p class="text-center">
-              <strong>Equipo de Trabajo.</strong> <br>
-             José Carter, Verónica Gatica, Francisca Patricia, Constanza
-              Valdovinos, Benjamín Vicente.
+              <strong>Equipo de Trabajo.</strong> <br />
+              José Carter, Verónica Gatica, Francisca Patricia, Constanza Valdovinos, Benjamín Vicente.
             </p>
           </div>
         </div>
       </div>
-      
-            <div class="container text-white">
+
+      <div class="container text-white">
         <div class="row py-5">
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto small">
             <p class="text-center">
-              <strong> Fuentes. </strong> <br> <a href style="color:white;"="https://www.conaf.cl/incendios-forestales/tormenta-de-fuego-en-chile/"> Tormenta de Fuego en Chile
-              </a> , <br> <a href style="color:white;"="https://www.nasa.gov/image-feature/goddard/2017/fires-continue-to-plague-chile"> Fires Continue to Plague Chile </a>
-              , <br> <a href style="color:white;"="https://earthobservatory.nasa.gov/images/89523/fires-continue-in-chile"> Imágenes satélitales de los incendios </a>
-              , <br> <a href style="color:white;"="https://biblioteca.digital.gob.cl/bitstream/handle/123456789/64/2017-03-29%20Chile%20y%20la%20Tormenta%20de%20Fuego%20-%20final%20-%20para%20distribucion%20limitada.pdf?sequence=1&isAllowed=y"> Chile y la Tormenta de Fuego </a> , 
-              <br> <a href style="color:white;"="https://keneamazon.net/Documents/Publications/Virtual-Library/GRFFS/18.pdf"> Incendios forestales y medioambiente: una síntesis global. </a>
+              <strong> Fuentes. </strong> <br />
+              <a style="color: white;" href="https://www.conaf.cl/incendios-forestales/tormenta-de-fuego-en-chile/">
+                Tormenta de Fuego en Chile
+              </a>
+              , <br />
+              <a
+                style="color: white;"
+                href="https://www.nasa.gov/image-feature/goddard/2017/fires-continue-to-plague-chile"
+              >
+                Fires Continue to Plague Chile
+              </a>
+              , <br />
+              <a style="color: white;" href="https://earthobservatory.nasa.gov/images/89523/fires-continue-in-chile">
+                Imágenes satélitales de los incendios
+              </a>
+              , <br />
+              <a
+                style="color: white;"
+                href="https://biblioteca.digital.gob.cl/bitstream/handle/123456789/64/2017-03-29%20Chile%20y%20la%20Tormenta%20de%20Fuego%20-%20final%20-%20para%20distribucion%20limitada.pdf?sequence=1&isAllowed=y"
+              >
+                Chile y la Tormenta de Fuego
+              </a>
+              , <br />
+              <a
+                style="color: white;"
+                href="https://keneamazon.net/Documents/Publications/Virtual-Library/GRFFS/18.pdf"
+              >
+                Incendios forestales y medioambiente: una síntesis global.
+              </a>
             </p>
           </div>
         </div>
