@@ -26,6 +26,7 @@
         --bs-body-color: #222 !important;
         /* el que es color de destaque */
         --bs-primary: #f70;
+        --fondo-principal: #fffefe;
       }
 
       h1,
@@ -38,38 +39,40 @@
       }
 
       header {
-        padding-top: 60vh;
-        background: #fcf5f0 url("grafica/imagen-titular.png");
+        /* padding-top: 60vh; */
+        padding-bottom: 3em;
+        /* background: #fcf5f0 url("grafica/imagen-titular.png");
         background-position: center top;
         background-repeat: no-repeat;
-        background-size: auto 50%;
+        background-size: auto 50%; */
       }
 
-      footer {
-        background: black;
+      .top-illustration {
+        margin: 1rem auto;
+        width: 100%;
+        display: block;
       }
+
+      footer.bg-dark {
+        background: #1c1c1c !important;
+      }
+
       footer::before {
-        background-color: white;
         content: "";
         display: block;
         height: 300px;
-        background: white url("grafica/arboles-negros.svg") no-repeat center bottom;
+        background: var(--fondo-principal) url("grafica/arboles-negros.svg") repeat no-repeat center bottom;
         background-size: contain;
       }
-      .impacto-forestal {
-        --size: clamp(100px, 50vw, 400px);
-        text-align: center;
-        width: 100%;
-        max-width: 100vw;
-        overflow: hidden;
-        /* padding-left: var(--size); */
-      }
-      .impacto-forestal > img {
-        height: calc(1.1 * var(--size));
+
+      /* Secciones */
+      .section {
+        padding-top: 5em !important;
+        padding-bottom: 5em !important;
       }
 
-      .impacto-forestal > img:not(:first-child) {
-        margin-left: calc(-1 * var(--size));
+      main {
+        background-color: var(--fondo-principal);
       }
 
       /* animación de los circulos */
@@ -108,11 +111,11 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-            <body style="text-align: justify;">
+            <img class="top-illustration" src="grafica/imagen-titular.png" alt="Ilustración de la Tormenta Ignea" />
             <h1 class="text-center">La Tormenta Ignea del 2017</h1>
             <h2 class="text-center">VULNERABILIDADES Y DESASTRES SOCIONATURALES EN CHILE</h2>
             <h6 class="text-center my-4">INFOGRAFÍA DIGITAL | DISEÑO UC</h6>
-            <p class="lead" "text-align: justify;">
+            <p class="lead" style="text-align: justify;">
               A inicios del año 2017 en el secano costero chileno acontecieron una suma de incendios mega forestales que
               afectaron principalmente siete regiones del país. Este hecho fue denominado por especialistas como
               “Tormenta de Fuego”, dada su inusual gravedad que da paso a una nueva generación de incendios a escala
@@ -123,7 +126,7 @@
       </div>
     </header>
     <main>
-      <section class="container py-4">
+      <section class="container section">
         <div class="row">
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
             <h3 class="text-center">El Impacto Silvoagropecuario</h3>
@@ -133,14 +136,6 @@
               genera una “receta para el desastre” lo que facilita la propagación del incendio. Esto tiene un gran
               impacto en la región ya que se expande y pone en riesgos especies nativas en categoría de conservación.
             </p>
-          </div>
-
-          <div class="impacto-forestal" style="display: none;">
-            <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
-            <img src="grafica/impacto-forestal/4.svg" />
-            <img src="grafica/impacto-forestal/3.svg" />
-            <img src="grafica/impacto-forestal/2.svg" />
-            <img src="grafica/impacto-forestal/1.svg" />
           </div>
 
           <div class="col-lg-11 col-xl-10 col-xxl-9 mx-auto pt-3 pb-4 w-100 p-3">
@@ -340,7 +335,7 @@
         </div>
       </section>
 
-      <section class="container py-4">
+      <section class="container section">
         <div class="row">
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
             <h3 class="text-center">Zonas más afectadas</h3>
@@ -355,8 +350,8 @@
           <div class="text-center">
             <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
             <!-- https://observablehq.com/@benjavicente/mapa-incendios-2017 -->
-            <img src="grafica/mapa-data.png" class="d-md-none w-75 mx-auto"/>
-                    <img src="grafica/mapa-data.png" class="d-none d-md-block w-50 mx-auto"/>
+            <img src="grafica/mapa-data.png" class="d-md-none w-75 mx-auto" />
+            <img src="grafica/mapa-data.png" class="d-none d-md-block w-50 mx-auto" />
             <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
           </div>
 
@@ -369,7 +364,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="section">
         <div class="container">
           <div class="row">
             <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
@@ -382,21 +377,14 @@
                 y material de alojamiento.
               </p>
               <div class="col-lg-11 col-xl-10 col-xxl-9 mx-auto pt-3 pb-4">
-            <object
-              type="image/svg+xml"
-              data="gif/aviones-1.svg"
-              class="d-none d-md-block w-100"
-            ></object>
-            <object type="image/svg+xml" data="gif/aviones-2.svg" class="d-md-none w-100"></object>
-            <object type="image/svg+xml" data="gif/aviones-3.svg" class="d-md-none w-100"></object>
-          </div>
+                <object type="image/svg+xml" data="gif/aviones-1.svg" class="d-none d-md-block w-100"></object>
+                <object type="image/svg+xml" data="gif/aviones-2.svg" class="d-md-none w-100"></object>
+                <object type="image/svg+xml" data="gif/aviones-3.svg" class="d-md-none w-100"></object>
+              </div>
             </div>
           </div>
         </div>
-            </div>
-          </div>
-        </div>
-           
+
         <div class="container">
           <div class="row">
             <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto mt-4"></div>
@@ -404,29 +392,24 @@
         </div>
       </section>
 
-      <section class="container pt-4 pb-5">
+      <section class="container section">
         <div class="row">
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
             <h3 class="text-center">Para considerar en el futuro</h3>
             <p style="text-align: justify;">
-         
-              Los incendios de 2017 arrojaron alrededor de 100 millones de toneladas de dióxido de carbono equivalente a la atmósfera, cercano a los 111,6 millones de toneladas que se emitieron en todo Chile el año 2016.
+              Los incendios de 2017 arrojaron alrededor de 100 millones de toneladas de dióxido de carbono equivalente a
+              la atmósfera, cercano a los 111,6 millones de toneladas que se emitieron en todo Chile el año 2016.
             </p>
             <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto pt-3 pb-4">
-            
-            
-             <object type="image/svg+xml" data="grafica/30-30-30.svg" class="d-none d-md-block w-100"  ></object>
-            <object type="image/svg+xml" data="grafica/30-30-30.svg" class="d-md-none w-100"></object>
-              
+              <object type="image/svg+xml" data="grafica/30-30-30.svg" class="d-none d-md-block w-100"></object>
+              <object type="image/svg+xml" data="grafica/30-30-30.svg" class="d-md-none w-100"></object>
+            </div>
           </div>
-          </div>
-
-         
 
           <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
             <p style="text-align: justify;">
-              <br>
-                          Durante la quema de un bosque, el dióxido de carbono almacenado por los árboles durante décadas, es
+              <br />
+              Durante la quema de un bosque, el dióxido de carbono almacenado por los árboles durante décadas, es
               liberado a la atmósfera en cuestión de horas. En consecuencia, si la vegetación quemada no se regenera, el
               dióxido de carbono liberado permanece en la atmósfera. Estos gases liberados contribuyen al calentamiento
               global, desencadenando en forma gradual un cambio climático a nivel planetario. Por lo que, la suma de
@@ -489,7 +472,7 @@
                 style="color: white;"
                 href="https://www.thinglink.com/scene/883734118217547777?buttonSource=viewLimits"
               >
-               Los aviones que luchan contra los incendios forestales.
+                Los aviones que luchan contra los incendios forestales.
               </a>
             </p>
           </div>
@@ -499,68 +482,99 @@
         <div class="row py-5">
           <div class="col-sm-12 pb-3">
             <div class="container">
-                <div class="row py-5">
-                    <div class="col-lg-12">
-                        <h4 class="text-white text-center w-75 mx-auto mb-5">Más sobre vulnerabilidades y desastres socionaturales en Chile</h4>
-                    </div>
-               <!--DESDE AQUÍ LA FALLA DE SAN RAMÓN-->
-                    <div class="col-lg-4 mb-4">
-                        <div class="row g-0 bg-black text-white align-items-center shadow">
-                            <div class="col-4">
-                                <img src="https://raw.githubusercontent.com/profesorfaco/dno075-2021-2/main/img/grupo-falla.webp" class="w-100" />
-                            </div>
-                            <div class="col-8">
-                                <p class="px-3 small m-0 py-0">
-                                    <a href="https://fallasanramon-infografiadigital.github.io/entrega_final/" class="link-light fw-bold" target="_blank">Falla de San Ramón</a><br/>
-                                    <small>2021</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--HASTA AQUÍ LA FALLA DE SAN RAMÓN-->
-                    <!--DESDE AQUÍ EL CHAITÉN-->
-                    <div class="col-lg-4 mb-4">
-                        <div class="row g-0 bg-black text-white align-items-center shadow">
-                            <div class="col-4">
-                                <img src="https://raw.githubusercontent.com/profesorfaco/dno075-2021-2/main/img/grupo-volcan.webp" class="w-100" />
-                            </div>
-                            <div class="col-8">
-                                <p class="px-3 small m-0 py-0">
-                                    <a href="https://volcan-chaiten.github.io/Infrografia-Final/" class="link-light fw-bold" target="_blank">Chaitén, erupción inesperada</a><br/>
-                                    <small>2008</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--HASTA AQUÍ EL CHAITÉN-->
-                    <!--DESDE AQUÍ EL RIÑIHUAZO-->
-                    <div class="col-lg-4 mb-4">
-                        <div class="row g-0 bg-black text-white align-items-center shadow">
-                            <div class="col-4">
-                                <img src="https://raw.githubusercontent.com/profesorfaco/dno075-2021-2/main/img/grupo-rinihuazo.webp" class="w-100" />
-                            </div>
-                            <div class="col-8">
-                                <p class="px-3 small m-0 py-0">
-                                    <a href="https://infografia-digital.github.io/rinihuazo-final/" class="link-light fw-bold" target="_blank">El Riñihuazo</a><br/>
-                                    <small>1960</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--HASTA AQUÍ EL RIÑIHUAZO-->
+              <div class="row py-5">
+                <div class="col-lg-12">
+                  <h4 class="text-white text-center w-75 mx-auto mb-5">
+                    Más sobre vulnerabilidades y desastres socionaturales en Chile
+                  </h4>
                 </div>
+                <!--DESDE AQUÍ LA FALLA DE SAN RAMÓN-->
+                <div class="col-lg-4 mb-4">
+                  <div class="row g-0 bg-black text-white align-items-center shadow">
+                    <div class="col-4">
+                      <img
+                        src="https://raw.githubusercontent.com/profesorfaco/dno075-2021-2/main/img/grupo-falla.webp"
+                        class="w-100"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <p class="px-3 small m-0 py-0">
+                        <a
+                          href="https://fallasanramon-infografiadigital.github.io/entrega_final/"
+                          class="link-light fw-bold"
+                          target="_blank"
+                          >Falla de San Ramón</a
+                        ><br />
+                        <small>2021</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--HASTA AQUÍ LA FALLA DE SAN RAMÓN-->
+                <!--DESDE AQUÍ EL CHAITÉN-->
+                <div class="col-lg-4 mb-4">
+                  <div class="row g-0 bg-black text-white align-items-center shadow">
+                    <div class="col-4">
+                      <img
+                        src="https://raw.githubusercontent.com/profesorfaco/dno075-2021-2/main/img/grupo-volcan.webp"
+                        class="w-100"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <p class="px-3 small m-0 py-0">
+                        <a
+                          href="https://volcan-chaiten.github.io/Infrografia-Final/"
+                          class="link-light fw-bold"
+                          target="_blank"
+                          >Chaitén, erupción inesperada</a
+                        ><br />
+                        <small>2008</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--HASTA AQUÍ EL CHAITÉN-->
+                <!--DESDE AQUÍ EL RIÑIHUAZO-->
+                <div class="col-lg-4 mb-4">
+                  <div class="row g-0 bg-black text-white align-items-center shadow">
+                    <div class="col-4">
+                      <img
+                        src="https://raw.githubusercontent.com/profesorfaco/dno075-2021-2/main/img/grupo-rinihuazo.webp"
+                        class="w-100"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <p class="px-3 small m-0 py-0">
+                        <a
+                          href="https://infografia-digital.github.io/rinihuazo-final/"
+                          class="link-light fw-bold"
+                          target="_blank"
+                          >El Riñihuazo</a
+                        ><br />
+                        <small>1960</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--HASTA AQUÍ EL RIÑIHUAZO-->
+              </div>
             </div>
             <div class="container-fluid bg-black small text-white-50">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                            <p class="pt-3 text-center d-flex justify-content-between align-items-center">
-                                <span>INFOGRAFÍA DIGITAL</span> <a href="https://diseno.uc.cl/" target="_blank" class="link-light">DISEÑO UC</a> <span>DICIEMBRE 2021</span>
-                            </p>
-                        </div>
-                    </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                    <p class="pt-3 text-center d-flex justify-content-between align-items-center">
+                      <span>INFOGRAFÍA DIGITAL</span>
+                      <a href="https://diseno.uc.cl/" target="_blank" class="link-light">DISEÑO UC</a>
+                      <span>DICIEMBRE 2021</span>
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </footer>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
